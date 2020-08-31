@@ -1,0 +1,43 @@
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e6e8ec;
+  height: 68px;
+
+  .room-name {
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 14px;
+    color: #797e82;
+
+    .msg-status {
+      font-weight: normal;
+      font-size: 11px;
+      color: #797e82;
+    }
+  }
+
+  .chat-icons {
+    height: 100%;
+    display: flex;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 1rem;
+      margin-right: 1rem;
+      border-left: 2px solid #e6e8ec;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

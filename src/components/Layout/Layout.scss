@@ -1,0 +1,76 @@
+.layout-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  .navigation-bar-wrapper {
+    width: 20.3%;
+    max-width: 20.3%;
+  }
+  .inbox-wrapper {
+    display: none;
+  }
+  .friend-list-wrapper {
+    display: none;
+  }
+  .chat-wrapper {
+    width: 79.7%;
+    max-width: 79.7%;
+  }
+  .profile-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .layout-wrapper {
+    .navigation-bar-wrapper {
+      width: 8.3%;
+      max-width: 8.3%;
+    }
+    .inbox-wrapper {
+      display: none;
+    }
+    .chat-wrapper {
+      width: 63.7%;
+      max-width: 63.7%;
+    }
+    .friend-list-wrapper {
+      display: none;
+    }
+    .profile-wrapper {
+      display: block;
+      width: 28%;
+      max-width: 28%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .layout-wrapper {
+    .navigation-bar-wrapper {
+      width: 4.3%;
+      max-width: 4.3%;
+    }
+    .inbox-wrapper {
+      display: block;
+      min-width: 15.5%;
+      max-width: 15.5%;
+    }
+    .friend-list-wrapper {
+      display: block;
+      width: 24%;
+      max-width: 24%;
+    }
+    .chat-wrapper {
+      width: 40%;
+      min-width: 40%;
+    }
+    .profile-wrapper {
+      display: block;
+      width: 16.2%;
+      max-width: 16.2%;
+    }
+  }
+}

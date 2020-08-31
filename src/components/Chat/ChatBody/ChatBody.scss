@@ -1,0 +1,259 @@
+.chat-body {
+  width: 100%;
+  overflow-y: auto;
+  height: calc(100% - 130px);
+  font-size: 14px;
+
+  .msg-other {
+    margin: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    .avatar {
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      .timestamp {
+        margin-top: 6px;
+        color: #797e82;
+      }
+    }
+
+    .message-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      color: black;
+      padding: 1rem;
+
+      .link-details {
+        display: flex;
+        flex-direction: column;
+        margin-right: 4rem;
+
+        .title {
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .sub-txt {
+          font-size: 12px;
+          margin-bottom: 1rem;
+        }
+
+        .rating {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .rating-txt {
+            font-size: 12px;
+            margin-left: 0;
+          }
+        }
+
+        .buy-now-btn {
+          margin-top: 1rem;
+          text-align: center;
+          font-weight: bold;
+          font-size: 12px;
+          padding: 0.5rem;
+          color: white;
+          background-color: #2263b0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .message {
+      text-align: left;
+      padding: 1rem;
+      max-width: 80%;
+      color: black;
+      border-radius: 4px;
+      background-color: white;
+      position: relative;
+
+      &.message-image {
+        max-width: none;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+
+    .chat-bubble:before {
+      content: '';
+      position: absolute;
+      left: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid white;
+      border-bottom: 13px solid transparent;
+    }
+  }
+
+  .msg-me {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    .avatar {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      .timestamp {
+        margin-top: 6px;
+        color: #797e82;
+      }
+    }
+
+    .message-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #0084ff;
+      color: white;
+      padding: 1rem;
+
+      .link-details {
+        display: flex;
+        flex-direction: column;
+        margin-right: 4rem;
+
+        .title {
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .sub-txt {
+          font-size: 12px;
+          margin-bottom: 1rem;
+        }
+
+        .rating {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .rating-txt {
+            font-size: 12px;
+            margin-left: 0;
+          }
+        }
+
+        .buy-now-btn {
+          margin-top: 1rem;
+          text-align: center;
+          font-weight: bold;
+          font-size: 12px;
+          padding: 0.5rem;
+          color: white;
+          background-color: #2263b0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .message {
+      text-align: right;
+      padding: 1rem;
+      max-width: 80%;
+      background-color: #0084ff;
+      color: white;
+
+      border-radius: 4px;
+      position: relative;
+
+      &.message-image {
+        padding: 0;
+        max-width: none;
+        margin-right: 1rem;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+
+    .chat-bubble:before {
+      content: '';
+      position: absolute;
+      right: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-left: 26px solid #0084ff;
+      border-bottom: 13px solid transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chat-body {
+    .msg-other {
+      .message-details {
+        flex-direction: row;
+
+        .link-details {
+          .rating {
+            flex-direction: row;
+
+            .rating-txt {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .msg-me {
+      .message-details {
+        flex-direction: row;
+
+        .link-details {
+          .rating {
+            flex-direction: row;
+
+            .rating-txt {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
